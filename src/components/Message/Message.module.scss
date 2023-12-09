@@ -1,0 +1,129 @@
+.messageAll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+}
+
+// .message {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 20px;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   width: 100%;
+// }
+.message {
+  display: grid;
+  grid-template-areas:
+    "info info"
+    "text text"
+    "rating buttons";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto auto;
+  // flex-direction: row;
+  gap: 10px;
+  // justify-content: space-between;
+  // align-items: center;
+
+  width: 100%;
+}
+
+.ratingContainer {
+  grid-area: rating;
+
+  display: flex;
+
+  width: 100%;
+}
+
+.messageInfo {
+  grid-area: info;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.messageHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.messageText {
+  grid-area: text;
+
+  width: 100%;
+  min-height: 100%;
+
+  overflow-y: auto;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+}
+
+.username {
+  color: var(--colorBlack);
+  font-size: inherit;
+}
+
+.you {
+  display: inline-block;
+
+  margin-left: 10px;
+  padding: 0 5px;
+
+  color: var(--colorWhite);
+
+  background-color: var(--colorModerateblue);
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
+.buttonsContainer {
+  grid-area: buttons;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .message {
+    grid-template-areas:
+      "rating info buttons"
+      "rating text text";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+}

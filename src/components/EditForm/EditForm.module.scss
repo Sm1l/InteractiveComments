@@ -1,0 +1,31 @@
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+}
+
+.edit {
+  min-width: 100%;
+  padding: 10px;
+
+  color: inherit;
+
+  border: 1px solid var(--colorLightGray);
+  border-radius: var(--radius);
+
+  cursor: pointer;
+
+  resize: none;
+}
+
+.butttonsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+}

@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 20px;
+
+  color: var(--colorWhite);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: var(--radius);
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.redText {
+  background-color: var(--colorSoftRed);
+}
+
+.blueText {
+  background-color: var(--colorModerateblue);
+}
+
+.greyText {
+  background-color: var(--colorGrayishBlue);
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,28 @@
+.buttonTwo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  text-transform: capitalize;
+
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.redText {
+  color: var(--colorSoftRed);
+}
+
+.blueText {
+  color: var(--colorModerateblue);
+}

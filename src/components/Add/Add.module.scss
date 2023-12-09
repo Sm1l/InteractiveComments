@@ -1,0 +1,69 @@
+.add {
+  display: grid;
+  grid-template-areas:
+    "text text"
+    "image button";
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto auto;
+  gap: 10px;
+
+  width: 100%;
+}
+
+.imageContainer {
+  grid-area: image;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.input {
+  grid-area: text;
+
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid var(--colorLightGray);
+  border-radius: var(--radius);
+
+  cursor: pointer;
+
+  resize: none;
+}
+
+.buttonContainer {
+  grid-area: button;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .add {
+    grid-template-areas: "image text button";
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .buttonContainer {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
